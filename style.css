@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #ffeb3b;
+  --header-bg-color: #e53935;
+  --header-text-color: #fff;
+  --sidebar-bg-color: #e53935;
+  --sidebar-text-color: #fff;
+  --menu-bg-color: #ffc107;
+  --menu-hover-bg-color: #ff9800;
+  --button-bg-color: #4caf50;
+  --button-hover-bg-color: #388e3c;
+  --see-more-bg-color: #ff9800;
+  --see-more-hover-bg-color: #f57c00;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 5px solid #ffeb3b; /* Adiciona a faixa amarela */
+}
+
+.contact {
+  margin-top: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  width: 25%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.sidebar .menu a {
+  display: block;
+  background-color: var(--menu-bg-color);
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.sidebar .menu a:hover {
+  background-color: var(--menu-hover-bg-color);
+}
+
+.sidebar .address {
+  font-size: 14px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 75%;
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.product button {
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.see-more {
+  background-color: var(--see-more-bg-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.see-more:hover {
+  background-color: var(--see-more-hover-bg-color);
+}
