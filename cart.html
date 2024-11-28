@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-foreground">
+  <div class="p-4 bg-background text-foreground relative">
+    <a href="index.html" class="absolute top-4 left-4 bg-primary text-primary-foreground py-2 px-4 rounded">Voltar</a>
+    <h1 class="text-2xl font-bold text-red-600 text-center">Carrinho de Compras</h1>
+    <div id="cart-items" class="my-4">
+      <!-- Produtos adicionados dinamicamente -->
+    </div>
+    <div class="mt-6">
+      <p>Forma de pagamento:</p>
+      <select id="payment-method" class="border border-border rounded p-2 mb-4">
+        <option value="Pix">Pix</option>
+        <option value="Cartão">Débito / crédito</option>
+        <option value="Dinheiro">Dinheiro</option>
+      </select>
+      <p>Entregar no endereço:</p>
+      <input id="address" type="text" placeholder="Rua, número, complemento" class="border border-border rounded p-2 mb-4 w-full">
+      <p>Telefone para contato:</p>
+      <input id="phone" type="text" placeholder="(81) 9 1234-5678" class="border border-border rounded p-2 mb-4 w-full">
+    </div>
+    <div class="flex justify-between items-center mt-4">
+      <span id="total-price" class="font-bold">TOTAL: R$ 0,00</span>
+      <button id="finalize-order" class="bg-red-600 text-white py-2 px-4 rounded" disabled>Finalizar pedido</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

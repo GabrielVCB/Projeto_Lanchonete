@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -6,46 +6,40 @@
   <title>Lanchonete do Abner</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="header">
-    <h1>Lanchonete do Abner</h1>
-    <p class="contact">Fale conosco - (81)91234-5678 📱</p>
-  </header>
-  
-  <main class="main-container">
-    <aside class="sidebar">
-      <nav class="menu">
-        <a href="page1.html">Carrinho de Compras</a>
-        <a href="page2.html">Pedidos</a>
+<body class="bg-background text-foreground">
+  <header class="bg-red-600 text-white text-3xl p-4 text-center">LANCHONETE DO ABNER</header>
+  <div class="flex">
+    <aside class="bg-red-500 text-white w-1/4 p-4">
+      <p>Fale conosco - (81)91234-5678 📱</p>
+      <nav class="mt-4">
+        <a href="cart.html" class="block py-2 border-b border-zinc-300">Carrinho de compras</a>
+        <a href="orders.html" class="block py-2">Pedidos</a>
       </nav>
-      <address class="address">
-        149, R. dos Palmares, 127 - Santo Amaro, Recife - PE, 74970-240
-      </address>
+      <p class="mt-4">Rua das Flores, 123 - Centro, Cidade</p>
     </aside>
-
-    <section class="products">
-      <div class="product">
-        <img src="https://bit.ly/3VdGXEK" alt="Hambúrguer">
-        <p>Hambúrguer - R$ 10,00</p>
-        <button>+ Adicionar</button>
+    <main class="bg-yellow-200 flex-1 p-4 grid grid-cols-2 gap-4">
+      <div class="border border-zinc-300 p-2 text-center">
+        <img src="https://bit.ly/3VdGXEK" alt="Hamburguer">
+        <p>Hamburguer - R$ 10,00</p>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-1 rounded add-to-cart" data-name="Hambúrguer" data-price="10">+ Adicionar</button>
       </div>
-      <div class="product">
+      <div class="border border-zinc-300 p-2 text-center">
         <img src="https://bit.ly/3Zs4rsy" alt="Sopa de Feijão">
         <p>Sopa de Feijão - R$ 8,00</p>
-        <button>+ Adicionar</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-1 rounded add-to-cart" data-name="Sopa de Feijão" data-price="8">+ Adicionar</button>
       </div>
-      <div class="product">
+      <div class="border border-zinc-300 p-2 text-center">
         <img src="https://bit.ly/3OvJN4m" alt="Coxinha">
         <p>Coxinha - R$ 5,00</p>
-        <button>+ Adicionar</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-1 rounded add-to-cart" data-name="Coxinha" data-price="5">+ Adicionar</button>
       </div>
-      <div class="product">
+      <div class="border border-zinc-300 p-2 text-center">
         <img src="https://bit.ly/4i51IfH" alt="Refrigerante">
         <p>Refrigerante - R$ 5,00</p>
-        <button>+ Adicionar</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-1 rounded add-to-cart" data-name="Refrigerante" data-price="5">+ Adicionar</button>
       </div>
-      <button class="see-more">Ver mais</button>
-    </section>
-  </main>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
