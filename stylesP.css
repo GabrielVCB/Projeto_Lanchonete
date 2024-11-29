@@ -174,4 +174,15 @@ body, html {
   .clear-history-button:hover {
     background-color: #ff1a1a;
   }
-  
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #010101;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 1rem;
+  }

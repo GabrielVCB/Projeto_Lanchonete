@@ -118,14 +118,14 @@ function clearHistory() {
   orderHistory = [];
   saveOrders();
   updateOrdersDisplay();
-  showNotification("Histórico exluído");
+  showNotification("Histórico exluído!");
 }
 
 function deleteCurrentOrder() {
   currentOrder = [];
   saveOrders();
   updateOrdersDisplay();
-  showNotification("Pedido cancelado");
+  showNotification("Pedido cancelado!");
 }
 
 function changeQuantity(name, delta) {
@@ -165,6 +165,7 @@ function finalizeOrder() {
   cart = [];
   saveCart();
   updateCartDisplay();
+  showNotification("Pedido finalizado!");
   window.location.href = 'pedidos.html';
 }
 
