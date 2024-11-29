@@ -33,19 +33,21 @@ body {
   padding: 16px;
   height: 64px; /* Define a height */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Botão Voltar */
 .back-button {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: #f70820;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #b71c1c;
   padding: 8px 16px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  position: relative;
+  left: 16px;
 }
 
 /* Título */
@@ -58,11 +60,11 @@ body {
 
 /* Itens do carrinho */
 .cart-item {
-  background-color: #ffffff; /* Fundo branco para cada seção de produto */
+  background-color: #ffffff; 
   padding: 16px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
