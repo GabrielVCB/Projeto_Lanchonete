@@ -88,7 +88,7 @@ function updateOrdersDisplay() {
         orderElement.appendChild(itemElement);
       });
       orderElement.innerHTML += `<span>Status: 🛵 A caminho</span>`;
-      orderElement.innerHTML += `<button class="delete-button" onclick="deleteCurrentOrder()">Excluir Pedido</button>`;
+      orderElement.innerHTML += `<button class="delete-button" onclick="deleteCurrentOrder()">Cancelar Pedido</button>`;
       ordersContainer.appendChild(orderElement);
       ordersContainer.appendChild(document.createElement('hr'));
     }
