@@ -150,11 +150,10 @@ function finalizeOrder() {
     return;
   }
 
-  // Move pedidos atuais para o histórico antes de finalizar o novo pedido
   if (currentOrder.length > 0) {
-    orderHistory.unshift(currentOrder); // Adiciona o pedido atual no início do histórico
+    orderHistory.unshift(currentOrder); 
     if (orderHistory.length > 2) {
-      orderHistory.pop(); // Remove o pedido mais antigo para manter no máximo 2 no histórico
+      orderHistory.pop(); 
     }
   }
   currentOrder = cart.slice();
@@ -163,6 +162,7 @@ function finalizeOrder() {
   cart = [];
   saveCart();
   updateCartDisplay();
+  showNotification("Pedido finalizado com sucesso!");
   window.location.href = 'pedidos.html';
 }
 
@@ -199,5 +199,12 @@ function updateCartDisplay() {
         totalElement.textContent = `TOTAL: R$ ${totalPrice.toFixed(2)}`;
       }
     }
+}
+  function showNotification(message) { 
+    const notification = document.createElement('div'); 
+    notification.className = 'notification'; 
+    notification.innerText = message; 
+    document.body.appendChild(notification); 
+    setTimeout(() => { notification.remove(); }, 3000);
   }
   
