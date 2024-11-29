@@ -8,27 +8,29 @@
   </head>
   <body>
     <div class="p-4 bg-background text-foreground relative">
-      <button class="back-button">Voltar</button>
+      <button class="back-button" onclick="window.location.href = 'index.html'">Voltar</button>
       <h1 class="title">Carrinho de compras</h1>
       <div class="cart-container">
         <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
       </div>     
       <div class="payment">
         <p>Forma de pagamento:</p>
-        <select class="input-select">
-          <option>Pix</option>
-          <option>Débito / crédito</option>
-          <option>Dinheiro</option>
+        <select class="input-select" id="payment-method">
+          <option value="">Selecione</option>
+          <option value="Pix">Pix</option>
+          <option value="Débito / crédito">Débito / crédito</option>
+          <option value="Dinheiro">Dinheiro</option>
         </select>
         <p>Entregar no endereço:</p>
-        <input type="text" placeholder="Rua, número, complemento" class="input-text" />
+        <input type="text" placeholder="Rua, número, complemento" class="input-text" id="address" />
         <p>Telefone para contato:</p>
-        <input type="text" placeholder="(31) 9 1234-5678" class="input-text" />
+        <input type="text" placeholder="(31) 9 1234-5678" class="input-text" id="phone" />
       </div>
       <div class="summary">
         <span class="total">TOTAL: R$ 0,00</span>
-        <button class="checkout-button">Finalizar pedido</button>
+        <button class="checkout-button" onclick="finalizeOrder()">Finalizar pedido</button>
       </div>
+      <p id="error-message" class="error-message" style="color: red; display: none;">Preencha todos os campos obrigatórios!</p>
     </div>
     <script>
       document.querySelector('.back-button').addEventListener('click', function() {

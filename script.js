@@ -91,7 +91,19 @@ function changeQuantity(name, delta) {
   }
 }
 
+function validateOrder() {
+  const paymentMethod = document.getElementById('payment-method').value;
+  const address = document.getElementById('address').value;
+  const phone = document.getElementById('phone').value;
+  return paymentMethod && address && phone;
+}
+
 function finalizeOrder() {
+  if (!validateOrder()) {
+    document.getElementById('error-message').style.display = 'block';
+    return;
+  }
+
   cart.forEach(item => {
     orders.push({ ...item });
   });
