@@ -1,4 +1,5 @@
 let cart = [];
+let orders = [];
 
 function addToCart(product) {
   const itemIndex = cart.findIndex(item => item.name === product.name);
@@ -19,6 +20,17 @@ function loadCart() {
   const storedCart = localStorage.getItem('cart');
   if (storedCart) {
     cart = JSON.parse(storedCart);
+  }
+}
+
+function saveOrders() {
+  localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+function loadOrders() {
+  const storedOrders = localStorage.getItem('orders');
+  if (storedOrders) {
+    orders = JSON.parse(storedOrders);
   }
 }
 
@@ -44,11 +56,26 @@ function updateCartDisplay() {
       cartContainer.appendChild(itemElement);
     });
 
-    // Atualiza o valor total do carrinho
     const totalElement = document.querySelector('.total');
     if (totalElement) {
       totalElement.textContent = `TOTAL: R$ ${totalPrice.toFixed(2)}`;
     }
+  }
+}
+
+function updateOrdersDisplay() {
+  const ordersContainer = document.querySelector('.orders-container');
+  if (ordersContainer) {
+    ordersContainer.innerHTML = '';
+    orders.forEach(order => {
+      const orderElement = document.createElement('div');
+      orderElement.className = 'order-item';
+      orderElement.innerHTML = `
+        <span>${order.name} - R$ ${order.price.toFixed(2)}</span>
+        <span>🛵 A caminho</span>
+      `;
+      ordersContainer.appendChild(orderElement);
+    });
   }
 }
 
@@ -64,7 +91,20 @@ function changeQuantity(name, delta) {
   }
 }
 
+function finalizeOrder() {
+  cart.forEach(item => {
+    orders.push({ ...item });
+  });
+  saveOrders();
+  cart = [];
+  saveCart();
+  updateCartDisplay();
+  window.location.href = 'pedidos.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   loadCart();
+  loadOrders();
   updateCartDisplay();
+  updateOrdersDisplay();
 });
