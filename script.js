@@ -11,6 +11,12 @@ function addToCart(product) {
   updateCartDisplay();
 }
 
+function addToCartAndRedirectFromCartPage() {
+  // Adiciona um produto fixo como exemplo; você pode personalizar isso
+  addToCart({ name: 'Produto Exemplo', price: 10.00 });
+  window.location.href = 'index.html';
+}
+
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
