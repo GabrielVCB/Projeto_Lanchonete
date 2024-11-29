@@ -93,6 +93,7 @@ body, html {
     justify-content: center;
     position: relative;
     width: 100%; 
+    font-family: Arial,
   }
   
   /* Estilos para as seções de pedidos */
