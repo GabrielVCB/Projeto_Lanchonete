@@ -1,7 +1,31 @@
 /* Estilos para a página de pedidos */
 
 /* Configurações de layout */
-.bg-background {
+body, h1, p, a, img, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Full height for body and html */
+  body, html {
+    height: 100%;
+  }
+  
+  /* Ensure the container fills the whole screen */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 64px); /* Header height */
+  }
+  
+  .bg-background {
     background-color: #ffffff;
   }
   
@@ -51,20 +75,39 @@
   
   /* Estilos para o título */
   .title {
-    font-size: 1.875rem;
+    font-size: 2rem; /* Mesma fonte e tamanho do título da página principal */
+    color: white; /* Mesma cor do título da página principal */
+    text-align: center;
+    margin: 0; /* Remove margens padrão */
     font-weight: bold;
-    color: #dc3545;
     flex: 1;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #b71c1c;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 16px;
+    height: 64px; /* Define a height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
   }
   
   /* Estilos para o botão de voltar */
   .back-button {
-    background-color: #f70820;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #b71c1c;
     padding: 8px 16px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    position: absolute;
+    left: 16px; 
   }
   
   .back-button:hover {
@@ -98,7 +141,7 @@
     font-weight: bold;
     text-align: right;
   }
-    
+  
   .view-more-button:hover {
     background-color: #5a6268;
   }
@@ -108,6 +151,8 @@
     border-top: 1px solid #6c757d;
     margin: 16px 0;
   }
+  
+  /* Estilos para o botão excluir */
   .delete-button {
     background-color: #ff4c4c; 
     color: white; 
@@ -116,7 +161,7 @@
     text-align: center; 
     text-decoration: none; 
     display: inline-block; 
-    font-size: 16px; 
+    font-size: 12px; 
     margin: 10px 2px; 
     cursor: pointer; 
     border-radius: 5px; 
@@ -126,6 +171,8 @@
   .delete-button:hover {
     background-color: #ff1a1a;
   }
+  
+  /* Estilos para o botão limpar histórico */
   .clear-history-button {
     background-color: #ff4c4c; 
     color: white; 
@@ -144,5 +191,16 @@
   
   .clear-history-button:hover {
     background-color: #ff1a1a;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.875rem;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto; 
   }
   
