@@ -59,3 +59,33 @@ function updateQuantity(name, delta) {
 
   updateCart();
 }
+const addressInput = document.getElementById("address");
+const phoneInput = document.getElementById("phone");
+const paymentSelect = document.getElementById("payment-method");
+
+function validateCheckout() {
+  const isValid = addressInput.value.trim() && phoneInput.value.trim() && paymentSelect.value;
+  finalizeOrderBtn.disabled = !isValid;
+}
+
+addressInput.addEventListener("input", validateCheckout);
+phoneInput.addEventListener("input", validateCheckout);
+paymentSelect.addEventListener("change", validateCheckout);
+
+document.querySelectorAll(".add-to-cart").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    addToCart(name, price);
+  });
+});
+
+function addToCart(name, price) {
+  const existingItem = cart.find((item) => item.name === name);
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+  updateCart();
+}
