@@ -4,6 +4,12 @@ body, h1, p, a, img, button {
   padding: 0;
   box-sizing: border-box;
 }
+.product img {
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin-bottom: 8px; 
+}
 
 body {
   font-family: Arial, sans-serif;
