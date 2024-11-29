@@ -8,11 +8,17 @@
   </head>
   <body>
     <div class="p-4 bg-background text-foreground relative">
-      <button class="back-button" onclick="window.location.href = 'index.html'">Voltar</button>
+      <button class="back-button">Voltar</button>
       <h1 class="title">Carrinho de compras</h1>
-      <div class="cart-container">
-        <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
-      </div>
+      <body>
+          <div class="cart-container">
+            <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+          </div>
+          <!-- Resto do código permanece o mesmo -->
+        </div>
+        <script src="script.js"></script>
+      </body>      
+      <button class="add-button">+ Adicionar ao carrinho</button>
       <div class="payment">
         <p>Forma de pagamento:</p>
         <select class="input-select">
@@ -23,13 +29,17 @@
         <p>Entregar no endereço:</p>
         <input type="text" placeholder="Rua, número, complemento" class="input-text" />
         <p>Telefone para contato:</p>
-        <input type="text" placeholder="(81) 91234-5678" class="input-text" />
+        <input type="text" placeholder="(31) 9 1234-5678" class="input-text" />
       </div>
       <div class="summary">
         <span class="total">TOTAL: R$ 15,00</span>
         <button class="checkout-button">Finalizar pedido</button>
       </div>
     </div>
-    <script src="cart.js"></script>
+    <script>
+      document.querySelector('.back-button').addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    </script>    
   </body>
 </html>
