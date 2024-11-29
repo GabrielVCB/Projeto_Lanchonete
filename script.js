@@ -11,6 +11,7 @@ function addToCart(product) {
   }
   saveCart();
   updateCartDisplay();
+  showNotification(`${product.name} foi adicionado ao carrinho`);
 }
 
 function saveCart() {
@@ -166,12 +167,6 @@ function finalizeOrder() {
   window.location.href = 'pedidos.html';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadCart();
-  loadOrders();
-  updateCartDisplay();
-  updateOrdersDisplay();
-});
 function updateCartDisplay() {
     const cartContainer = document.querySelector('.cart-container');
     if (cartContainer) {
@@ -207,4 +202,11 @@ function updateCartDisplay() {
     document.body.appendChild(notification); 
     setTimeout(() => { notification.remove(); }, 3000);
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+    loadOrders();
+    updateCartDisplay();
+    updateOrdersDisplay();
+  });
   
