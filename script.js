@@ -1,5 +1,6 @@
 let cart = [];
-let orders = [];
+let currentOrder = [];
+let orderHistory = [];
 
 function addToCart(product) {
   const itemIndex = cart.findIndex(item => item.name === product.name);
@@ -24,13 +25,18 @@ function loadCart() {
 }
 
 function saveOrders() {
-  localStorage.setItem('orders', JSON.stringify(orders));
+  localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+  localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
 }
 
 function loadOrders() {
-  const storedOrders = localStorage.getItem('orders');
-  if (storedOrders) {
-    orders = JSON.parse(storedOrders);
+  const storedCurrentOrder = localStorage.getItem('currentOrder');
+  const storedOrderHistory = localStorage.getItem('orderHistory');
+  if (storedCurrentOrder) {
+    currentOrder = JSON.parse(storedCurrentOrder);
+  }
+  if (storedOrderHistory) {
+    orderHistory = JSON.parse(storedOrderHistory);
   }
 }
 
@@ -65,16 +71,35 @@ function updateCartDisplay() {
 
 function updateOrdersDisplay() {
   const ordersContainer = document.querySelector('.orders-container');
+  const historyContainer = document.querySelector('.history-container');
+  
   if (ordersContainer) {
     ordersContainer.innerHTML = '';
-    orders.forEach(order => {
+    if (currentOrder.length > 0) {
+      currentOrder.forEach(item => {
+        const orderElement = document.createElement('div');
+        orderElement.className = 'order-item';
+        orderElement.innerHTML = `
+          <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+          <span>🛵 A caminho</span>
+        `;
+        ordersContainer.appendChild(orderElement);
+      });
+      ordersContainer.appendChild(document.createElement('hr'));
+    }
+  }
+
+  if (historyContainer) {
+    historyContainer.innerHTML = '';
+    orderHistory.forEach(order => {
       const orderElement = document.createElement('div');
       orderElement.className = 'order-item';
       orderElement.innerHTML = `
         <span>${order.name} - R$ ${order.price.toFixed(2)}</span>
-        <span>🛵 A caminho</span>
+        <span>✔️ Entregue</span>
       `;
-      ordersContainer.appendChild(orderElement);
+      historyContainer.appendChild(orderElement);
+      historyContainer.appendChild(document.createElement('hr'));
     });
   }
 }
@@ -104,9 +129,10 @@ function finalizeOrder() {
     return;
   }
 
-  cart.forEach(item => {
-    orders.push({ ...item });
-  });
+  // Move pedidos atuais para o histórico antes de finalizar o novo pedido
+  orderHistory = orderHistory.concat(currentOrder);
+  currentOrder = cart.slice();
+
   saveOrders();
   cart = [];
   saveCart();
