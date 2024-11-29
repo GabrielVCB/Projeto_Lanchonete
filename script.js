@@ -113,6 +113,12 @@ function updateOrdersDisplay() {
   }
 }
 
+function clearHistory() {
+  orderHistory = [];
+  saveOrders();
+  updateOrdersDisplay();
+}
+
 function deleteCurrentOrder() {
   currentOrder = [];
   saveOrders();
