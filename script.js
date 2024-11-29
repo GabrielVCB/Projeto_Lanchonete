@@ -140,6 +140,9 @@ function finalizeOrder() {
   // Move pedidos atuais para o histórico antes de finalizar o novo pedido
   if (currentOrder.length > 0) {
     orderHistory.push(currentOrder);
+    if (orderHistory.length > 2) {
+      orderHistory.shift(); // Remove o pedido mais antigo para manter no máximo 2 no histórico
+    }
   }
   currentOrder = cart.slice();
 
