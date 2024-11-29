@@ -118,12 +118,14 @@ function clearHistory() {
   orderHistory = [];
   saveOrders();
   updateOrdersDisplay();
+  showNotification("Histórico exluído");
 }
 
 function deleteCurrentOrder() {
   currentOrder = [];
   saveOrders();
   updateOrdersDisplay();
+  showNotification("Pedido cancelado");
 }
 
 function changeQuantity(name, delta) {
