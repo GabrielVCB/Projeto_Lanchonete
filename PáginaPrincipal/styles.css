@@ -1,0 +1,90 @@
+/* Reset */
+body, h1, p, a, img, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #b71c1c;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Layout */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #d32f2f;
+  color: white;
+  width: 25%;
+  padding: 16px;
+}
+
+.navigation .nav-item {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.address {
+  margin-top: 16px;
+}
+
+/* Main content */
+.main-content {
+  background-color: #ffecb3;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.add-button {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #ffa000;
+}
+
+/* Footer */
+.footer {
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 16px;
+  font-size: 0.875rem;
+}

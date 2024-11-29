@@ -1,0 +1,132 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  /* Container principal */
+  .p-4 {
+    padding: 16px;
+  }
+  
+  .bg-background {
+    background-color: #ffffff;
+  }
+  
+  .text-foreground {
+    color: #212529;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  /* Botão Voltar */
+  .back-button {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Título */
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dc3545;
+  }
+  
+  /* Itens do carrinho */
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .item-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+    border-radius: 8px;
+  }
+  
+  .item-info {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  .quantity-value {
+    margin: 0 8px;
+  }
+  
+  /* Botão adicionar */
+  .add-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 16px auto;
+    text-align: center;
+  }
+  
+  /* Formulários */
+  .input-select,
+  .input-text {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  /* Resumo */
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .total {
+    font-weight: bold;
+  }
+  
+  .checkout-button {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
