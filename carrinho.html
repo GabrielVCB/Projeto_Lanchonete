@@ -10,14 +10,9 @@
     <div class="p-4 bg-background text-foreground relative">
       <button class="back-button">Voltar</button>
       <h1 class="title">Carrinho de compras</h1>
-      <body>
-          <div class="cart-container">
-            <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
-          </div>
-          <!-- Resto do código permanece o mesmo -->
-        </div>
-        <script src="script.js"></script>
-      </body>      
+      <div class="cart-container">
+        <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+      </div>     
       <div class="payment">
         <p>Forma de pagamento:</p>
         <select class="input-select">
@@ -31,7 +26,7 @@
         <input type="text" placeholder="(31) 9 1234-5678" class="input-text" />
       </div>
       <div class="summary">
-        <span class="total">TOTAL: R$ 15,00</span>
+        <span class="total">TOTAL: R$ 0,00</span>
         <button class="checkout-button">Finalizar pedido</button>
       </div>
     </div>
@@ -40,5 +35,6 @@
         window.location.href = 'index.html';
       });
     </script>    
+    <script src="script.js"></script>
   </body>
 </html>
