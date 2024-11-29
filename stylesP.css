@@ -59,16 +59,36 @@
   
   /* Estilos para o botão de voltar */
   .back-button {
-    background-color: #f70820;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #b71c1c;
     padding: 8px 16px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
   }
   
   .back-button:hover {
-    background-color: #5a6268;
+    background-color: #d93045;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #b71c1c; /* Fundo vermelho */
+    color: #ffffff; /* Texto branco */
+    font-size: 2rem;
+    text-align: center;
+    padding: 16px;
+    height: 64px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
   
   /* Estilos para as seções de pedidos */
@@ -98,7 +118,7 @@
     font-weight: bold;
     text-align: right;
   }
-    
+  
   .view-more-button:hover {
     background-color: #5a6268;
   }
@@ -108,38 +128,40 @@
     border-top: 1px solid #6c757d;
     margin: 16px 0;
   }
+  
   .delete-button {
-    background-color: #ff4c4c; 
-    color: white; 
-    border: none; 
-    padding: 5px 10px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    margin: 10px 2px; 
-    cursor: pointer; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease; 
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
   .delete-button:hover {
     background-color: #ff1a1a;
   }
+  
   .clear-history-button {
-    background-color: #ff4c4c; 
-    color: white; 
-    border: none; 
-    padding: 5px 10px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 12px; 
-    margin: 10px 2px; 
-    cursor: pointer; 
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 2px;
+    cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease; 
-    float: right; 
+    transition: background-color 0.3s ease;
+    float: right;
   }
   
   .clear-history-button:hover {
