@@ -73,6 +73,9 @@ function updateOrdersDisplay() {
   const ordersContainer = document.querySelector('.orders-container');
   const historyContainer = document.querySelector('.history-container');
   
+  console.log("Orders:", currentOrder);
+  console.log("Order History:", orderHistory);
+  
   if (ordersContainer) {
     ordersContainer.innerHTML = '';
     if (currentOrder.length > 0) {
