@@ -73,9 +73,6 @@ function updateOrdersDisplay() {
   const ordersContainer = document.querySelector('.orders-container');
   const historyContainer = document.querySelector('.history-container');
   
-  console.log("Orders:", currentOrder);
-  console.log("Order History:", orderHistory);
-  
   if (ordersContainer) {
     ordersContainer.innerHTML = '';
     if (currentOrder.length > 0) {
@@ -90,6 +87,7 @@ function updateOrdersDisplay() {
         orderElement.appendChild(itemElement);
       });
       orderElement.innerHTML += `<span>Status: 🛵 A caminho</span>`;
+      orderElement.innerHTML += `<button class="delete-button" onclick="deleteCurrentOrder()">Excluir Pedido</button>`;
       ordersContainer.appendChild(orderElement);
       ordersContainer.appendChild(document.createElement('hr'));
     }
@@ -113,6 +111,12 @@ function updateOrdersDisplay() {
       historyContainer.appendChild(document.createElement('hr'));
     });
   }
+}
+
+function deleteCurrentOrder() {
+  currentOrder = [];
+  saveOrders();
+  updateOrdersDisplay();
 }
 
 function changeQuantity(name, delta) {
