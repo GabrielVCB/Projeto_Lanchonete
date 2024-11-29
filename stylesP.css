@@ -1,0 +1,121 @@
+/* Estilos para a página de pedidos */
+
+/* Configurações de layout */
+.bg-background {
+    background-color: #ffffff;
+  }
+  
+  .p-4 {
+    padding: 16px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .mt-4 {
+    margin-top: 16px;
+  }
+  
+  .mt-2 {
+    margin-top: 8px;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  /* Estilos para o título */
+  .title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #dc3545;
+    flex: 1;
+  }
+  
+  /* Estilos para o botão de voltar */
+  .back-button {
+    background-color: #6c757d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Estilos para as seções de pedidos */
+  .order-section {
+    background-color: #fef5b0;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  /* Estilos para os itens de pedidos */
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .total {
+    margin-top: 16px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  /* Estilos para o botão de "ver mais" */
+  .view-more-button {
+    background-color: #6c757d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view-more-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Estilos para a linha divisória */
+  .divider {
+    border-top: 1px solid #6c757d;
+    margin: 16px 0;
+  }
+  
