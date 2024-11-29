@@ -76,15 +76,18 @@ function updateOrdersDisplay() {
   if (ordersContainer) {
     ordersContainer.innerHTML = '';
     if (currentOrder.length > 0) {
+      const orderElement = document.createElement('div');
+      orderElement.className = 'order';
       currentOrder.forEach(item => {
-        const orderElement = document.createElement('div');
-        orderElement.className = 'order-item';
-        orderElement.innerHTML = `
+        const itemElement = document.createElement('div');
+        itemElement.className = 'order-item';
+        itemElement.innerHTML = `
           <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
-          <span>🛵 A caminho</span>
         `;
-        ordersContainer.appendChild(orderElement);
+        orderElement.appendChild(itemElement);
       });
+      orderElement.innerHTML += `<span>Status: 🛵 A caminho</span>`;
+      ordersContainer.appendChild(orderElement);
       ordersContainer.appendChild(document.createElement('hr'));
     }
   }
@@ -93,11 +96,16 @@ function updateOrdersDisplay() {
     historyContainer.innerHTML = '';
     orderHistory.forEach(order => {
       const orderElement = document.createElement('div');
-      orderElement.className = 'order-item';
-      orderElement.innerHTML = `
-        <span>${order.name} - R$ ${order.price.toFixed(2)}</span>
-        <span>✔️ Entregue</span>
-      `;
+      orderElement.className = 'order';
+      order.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'order-item';
+        itemElement.innerHTML = `
+          <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+        `;
+        orderElement.appendChild(itemElement);
+      });
+      orderElement.innerHTML += `<span>Status: ✔️ Entregue</span>`;
       historyContainer.appendChild(orderElement);
       historyContainer.appendChild(document.createElement('hr'));
     });
@@ -130,7 +138,9 @@ function finalizeOrder() {
   }
 
   // Move pedidos atuais para o histórico antes de finalizar o novo pedido
-  orderHistory = orderHistory.concat(currentOrder);
+  if (currentOrder.length > 0) {
+    orderHistory.push(currentOrder);
+  }
   currentOrder = cart.slice();
 
   saveOrders();
