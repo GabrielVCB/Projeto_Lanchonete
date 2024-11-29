@@ -8,28 +8,46 @@
   </head>
   <body>
     <div class="p-4 bg-background text-foreground relative">
-      <button class="back-button" onclick="window.location.href='index.html'">Voltar</button>
+      <button class="back-button">Voltar</button>
       <h1 class="title">Carrinho de compras</h1>
-      <div class="cart-items">
-        <!-- Os itens serão gerados dinamicamente via script.js -->
+      <div class="item">
+        <img src="https://placehold.co/100x100" alt="Hambúrguer" class="item-img" />
+        <div class="item-info">
+          <p class="item-name">Hambúrguer - R$ 10,00</p>
+          <div class="quantity">
+            <button class="quantity-button">+</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-button">-</button>
+          </div>
+        </div>
       </div>
-      <button class="add-button" onclick="window.location.href='index.html'">+ Adicionar ao carrinho</button>
+      <div class="item">
+        <img src="https://placehold.co/100x100" alt="Refrigerante" class="item-img" />
+        <div class="item-info">
+          <p class="item-name">Refrigerante - R$ 5,00</p>
+          <div class="quantity">
+            <button class="quantity-button">+</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-button">-</button>
+          </div>
+        </div>
+      </div>
+      <button class="add-button">+ Adicionar ao carrinho</button>
       <div class="payment">
         <p>Forma de pagamento:</p>
-        <select id="payment-method" class="input-select">
-          <option value="">Selecione</option>
+        <select class="input-select">
           <option>Pix</option>
           <option>Débito / crédito</option>
           <option>Dinheiro</option>
         </select>
         <p>Entregar no endereço:</p>
-        <input type="text" id="delivery-address" placeholder="Rua, número, complemento" class="input-text" />
+        <input type="text" placeholder="Rua, número, complemento" class="input-text" />
         <p>Telefone para contato:</p>
-        <input type="text" id="contact-phone" placeholder="(31) 9 1234-5678" class="input-text" />
+        <input type="text" placeholder="(31) 9 1234-5678" class="input-text" />
       </div>
       <div class="summary">
-        <span class="total">TOTAL: R$ 0,00</span>
-        <button class="checkout-button" disabled>Finalizar pedido</button>
+        <span class="total">TOTAL: R$ 15,00</span>
+        <button class="checkout-button">Finalizar pedido</button>
       </div>
     </div>
     <script src="script.js"></script>
