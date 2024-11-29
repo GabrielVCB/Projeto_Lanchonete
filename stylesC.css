@@ -86,19 +86,6 @@ body {
     margin: 0 8px;
   }
   
-  /* Botão adicionar */
-  .add-button {
-    background-color: #28a745;
-    color: #ffffff;
-    padding: 10px 16px;
-    border-radius: 24px;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 16px auto;
-    text-align: center;
-  }
-  
   /* Formulários */
   .input-select,
   .input-text {
