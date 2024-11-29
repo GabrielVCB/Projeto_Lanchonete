@@ -163,7 +163,6 @@ function finalizeOrder() {
   cart = [];
   saveCart();
   updateCartDisplay();
-  showNotification("Pedido finalizado com sucesso!");
   window.location.href = 'pedidos.html';
 }
 
