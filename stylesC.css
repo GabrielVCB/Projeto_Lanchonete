@@ -13,7 +13,7 @@ body {
   }
   
   .bg-background {
-    background-color: #ffffff;
+    background-color: #fcf59b;
   }
   
   .text-foreground {
@@ -29,7 +29,7 @@ body {
     position: absolute;
     top: 16px;
     left: 16px;
-    background-color: #007bff;
+    background-color: #f70820;
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 4px;
@@ -42,7 +42,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #dc3545;
+    color: #f70820;
   }
   
   /* Itens do carrinho */
