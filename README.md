@@ -41,7 +41,7 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 
 ### Funcionais
 
-1. O cliente visualiza todos os produtos disponíveis na página inicial, com descrição, imagem e preço.
+1. O cliente visualiza todos os produtos disponíveis na página inicial, com imagem e preço.
 2. É possível adicionar produtos ao carrinho.
 3. O cliente altera a quantidade ou remove itens no carrinho.
 4. O sistema calcula automaticamente o valor total do pedido no carrinho.
@@ -55,9 +55,8 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 2. Carrega rapidamente, com um tempo de resposta inferior a 2 segundos para as principais ações.
 3. O design segue as diretrizes do protótipo criado no Figma.
 4. Utiliza `localStorage` para armazenar dados de forma persistente.
-5. O código é organizado e legível, facilitando futuras manutenções.
-6. O site é hospedado em um ambiente confiável e acessível, como a plataforma Vercel.
-7. Apresenta notificações de erro e/ou confirmação para ações relevantes.
+5. O site é hospedado em um ambiente confiável e acessível, como a plataforma Vercel.
+6. Apresenta notificações de erro e/ou confirmação para ações relevantes.
 
 ## 🚀 Tecnologias Utilizadas
 
