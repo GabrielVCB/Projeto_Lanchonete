@@ -172,3 +172,32 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartDisplay();
   updateOrdersDisplay();
 });
+function updateCartDisplay() {
+    const cartContainer = document.querySelector('.cart-container');
+    if (cartContainer) {
+      cartContainer.innerHTML = '';
+      let totalPrice = 0;
+      cart.forEach(item => {
+        const itemTotalPrice = item.price * item.quantity;
+        totalPrice += itemTotalPrice;
+  
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item'; // Usa a classe para estilizar a seção branca
+        itemElement.innerHTML = `
+          <p class="item-name">${item.name} - R$ ${itemTotalPrice.toFixed(2)}</p>
+          <div class="quantity">
+            <button class="quantity-button" onclick="changeQuantity('${item.name}', 1)">+</button>
+            <span class="quantity-value">${item.quantity}</span>
+            <button class="quantity-button" onclick="changeQuantity('${item.name}', -1)">-</button>
+          </div>
+        `;
+        cartContainer.appendChild(itemElement);
+      });
+  
+      const totalElement = document.querySelector('.total');
+      if (totalElement) {
+        totalElement.textContent = `TOTAL: R$ ${totalPrice.toFixed(2)}`;
+      }
+    }
+  }
+  
