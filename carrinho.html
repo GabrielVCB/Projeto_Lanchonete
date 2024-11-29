@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesC.css" />
   </head>
   <body>
+    <header class="header">Carrinho de Compras</header>
     <div class="p-4 bg-background text-foreground relative">
       <button class="back-button" onclick="window.location.href = 'index.html'">Voltar</button>
       <h1 class="title">Carrinho de compras</h1>
@@ -32,11 +33,9 @@
       </div>
       <p id="error-message" class="error-message" style="color: red; display: none;">Preencha todos os campos obrigatórios!</p>
     </div>
-    <script>
-      document.querySelector('.back-button').addEventListener('click', function() {
-        window.location.href = 'index.html';
-      });
-    </script>    
+    <footer class="footer">
+      <p>&copy; 2023 Lanchonete do Abner. Todos os direitos reservados.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
