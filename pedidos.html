@@ -9,54 +9,19 @@
   <body>
     <div class="bg-background p-4">
       <div class="flex justify-between items-center">
-        <button class="back-button">Voltar</button>
+        <button class="back-button" onclick="window.location.href='index.html'">Voltar</button>
         <h1 class="title">Pedidos</h1>
       </div>
-      
       <div class="order-section">
         <h2 class="section-title">Meus pedidos</h2>
-        <div class="order-item">
-          <span>Hambúrguer - R$ 10,00</span>
-          <span>🛵 A caminho</span>
-        </div>
-        <div class="order-item">
-          <span>Refrigerante - R$ 5,00</span>
-          <span>____________________</span>
-        </div>
-        <div class="total">
-          <span class="font-bold">TOTAL: R$ 15,00</span>
+        <div class="order-items">
+          <!-- Os pedidos serão gerados dinamicamente via script.js -->
         </div>
       </div>
-
-      <div class="order-section">
-        <h2 class="section-title">Histórico</h2>
-        <div class="order-item">
-          <span>Coxinha - R$ 5,00</span>
-          <span>✔️ Entregue</span>
-        </div>
-        <div class="order-item">
-          <span>Suco - R$ 4,00</span>
-          <span>____________________</span>
-        </div>
-        <div class="total">
-          <span class="font-bold">TOTAL: R$ 15,00</span>
-        </div>
-        <hr class="divider" />
-        <div class="order-item">
-          <span>Sopa de feijão - R$ 8,00</span>
-          <span>✔️ Entregue</span>
-        </div>
-        <div class="order-item">
-          <span>____________________</span>
-        </div>
-        <div class="total">
-          <span class="font-bold">TOTAL: R$ 15,00</span>
-        </div>
-      </div>
-
       <div class="text-right">
         <button class="view-more-button">Ver mais</button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
