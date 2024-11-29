@@ -9,7 +9,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #b71c1c;
+  background-color: #b71c1c; 
   color: #ffffff; 
   font-size: 2rem;
   text-align: center;
@@ -27,8 +27,8 @@ body {
   top: 50%;
   left: 16px;
   transform: translateY(-50%); 
-  background-color: #ffffff; 
-  color: #b71c1c; 
+  background-color: #b71c1c; 
+  color: #ffffff; 
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
@@ -52,7 +52,6 @@ body {
 .relative {
   position: relative;
 }
-
 
 /* Título */
 .title {
@@ -96,6 +95,28 @@ body {
   margin: 0 8px;
 }
 
+/* Seção de itens do carrinho */
+.cart-item {
+  background-color: #ffffff; 
+  border: 1px solid #ced4da; 
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item .quantity {
+  display: flex;
+  align-items: center;
+}
+
 /* Formulários */
 .input-select,
 .input-text {
@@ -106,23 +127,38 @@ body {
   border-radius: 4px;
 }
 
+.input-select:focus,
+.input-text:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
 /* Resumo */
 .summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
+  border-top: 1px solid #ced4da;
+  padding-top: 16px;
 }
 
 .total {
   font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .checkout-button {
   background-color: #dc3545;
   color: #ffffff;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #c82333;
 }
