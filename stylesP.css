@@ -74,8 +74,8 @@
   
   /* Header */
   .header {
-    background-color: #b71c1c; /* Fundo vermelho */
-    color: #ffffff; /* Texto branco */
+    background-color: #b71c1c; 
+    color: #ffffff; 
     font-size: 2rem;
     text-align: center;
     padding: 16px;
@@ -85,11 +85,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%; 
   }
   
   /* Estilos para as seções de pedidos */
   .order-section {
-    background-color: #fcf59b;
+    background-color: #fef5b0;
     padding: 16px;
     border-radius: 8px;
     margin-top: 16px;
