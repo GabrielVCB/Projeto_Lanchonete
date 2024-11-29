@@ -72,10 +72,6 @@
     transition: background-color 0.3s;
   }
   
-  .back-button:hover {
-    background-color: #d93045;
-  }
-  
   /* Header */
   .header {
     background-color: #b71c1c; /* Fundo vermelho */
@@ -93,7 +89,7 @@
   
   /* Estilos para as seções de pedidos */
   .order-section {
-    background-color: #fef5b0;
+    background-color: #fcf59b;
     padding: 16px;
     border-radius: 8px;
     margin-top: 16px;
