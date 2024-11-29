@@ -1,7 +1,14 @@
 /* Estilos para a página de pedidos */
 
-/* Configurações de layout */
-.bg-background {
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Configurações de layout */
+  .bg-background {
     background-color: #ffffff;
   }
   
