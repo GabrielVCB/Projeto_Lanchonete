@@ -4,6 +4,18 @@ body, h1, p, a, img, button {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Full height for body and html */
+body, html {
+  height: 100%;
+}
+
+/* Ensure the container fills the whole screen */
+.container {
+  display: flex;
+  height: calc(100% - 64px); /* Header height */
+}
+
 .product img {
   width: 150px; 
   height: 150px; 
@@ -25,18 +37,19 @@ body {
   font-size: 2rem;
   text-align: center;
   padding: 16px;
+  height: 64px; /* Define a height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Layout */
-.container {
-  display: flex;
-}
-
 .sidebar {
   background-color: #d32f2f;
   color: white;
   width: 25%;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navigation .nav-item {
@@ -94,4 +107,8 @@ body {
   text-align: center;
   padding: 16px;
   font-size: 0.875rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
