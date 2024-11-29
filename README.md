@@ -56,39 +56,26 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 
 ### Página Inicial
 **Protótipo do Figma:**
-![Protótipo Página Inicial](https://via.placeholder.com/800x400.png?text=Protótipo+Página+Inicial)
+![Protótipo Página Inicial](https://github.com/user-attachments/assets/12ed21c5-e488-40b1-8cf7-adef8f59d172)
 
 **Página Desenvolvida:**
-![Página Inicial](https://via.placeholder.com/800x400.png?text=Página+Inicial)
+![Página Inicial](https://github.com/user-attachments/assets/d405e919-61ee-4995-b045-2af7d1da709c)
+
 
 ---
 
 ### Carrinho de Compras
 **Protótipo do Figma:**
-![Protótipo Carrinho de Compras](https://via.placeholder.com/800x400.png?text=Protótipo+Carrinho+de+Compras)
+![Protótipo Carrinho de Compras](https://github.com/user-attachments/assets/10d8fd20-6623-4162-a52e-40aaae6ed07a)
 
 **Página Desenvolvida:**
-![Carrinho de Compras](https://via.placeholder.com/800x400.png?text=Carrinho+de+Compras)
-
----
+![Carrinho de Compras](https://github.com/user-attachments/assets/694d5a10-911c-4de4-8a67-5399c0b97b4f)---
 
 ### Pedidos
 **Protótipo do Figma:**
-![Protótipo Pedidos](https://via.placeholder.com/800x400.png?text=Protótipo+Pedidos)
+![Protótipo Pedidos](https://github.com/user-attachments/assets/8a082956-3aa0-4796-a146-6c0129425f98)
 
 **Página Desenvolvida:**
-![Pedidos](https://via.placeholder.com/800x400.png?text=Pedidos)
-
----
-
-## 📍 Localização
-
-Lanchonete do Abner  
-Rua das Flores, 123, Centro, Cidade  
-Contato: (81) 91234-5678 📱
-
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins educacionais e pode ser utilizado livremente com os devidos créditos ao autor.
+![Pedidos](https://github.com/user-attachments/assets/b9ca7cce-5ba1-4f37-8439-1fe9f6d7a649)
 
 ---
