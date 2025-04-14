@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lanchonete do Abner</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      if (!localStorage.getItem("logado")) {
+        window.location.href = "login.html";
+      }
+    </script>
   </head>
   <body>
     <header class="header">LANCHONETE DO ABNER</header>
@@ -12,6 +17,7 @@
       <aside class="sidebar">
         <p>Fale conosco - (81)91234-5678 📱</p>
         <nav class="navigation">
+          <a href="perfil.html">Perfil</a>
           <a href="carrinho.html" class="nav-item">Carrinho de compras</a>
           <a href="pedidos.html" class="nav-item">Pedidos</a>
         </nav>
@@ -43,6 +49,6 @@
     <footer class="footer">
       <p>&copy; 2023 Lanchonete do Abner. Todos os direitos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js"></script>    
   </body>
 </html>

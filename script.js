@@ -240,4 +240,51 @@ function updateCartDisplay() {
     return Object.values(itensAgrupados);
   }
   
-  
+// Cadastrar novo usuário
+document.getElementById("cadastroForm")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const endereco = document.getElementById("endereco").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  const usuario = { nome, endereco, email, senha };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+  alert("Cadastro realizado com sucesso!");
+  window.location.href = "login.html";
+});
+
+// Login
+document.getElementById("loginForm")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("loginEmail").value;
+  const senha = document.getElementById("loginSenha").value;
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+  if (usuario && usuario.email === email && usuario.senha === senha) {
+    localStorage.setItem("logado", "true");
+    window.location.href = "index.html";
+  } else {
+    alert("Credenciais inválidas!");
+  }
+});
+
+// Mostrar dados do perfil
+if (window.location.pathname.includes("perfil.html")) {
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+  const perfilDiv = document.getElementById("perfilInfo");
+
+  if (usuario) {
+    perfilDiv.innerHTML = `
+      <p><strong>Nome:</strong> ${usuario.nome}</p>
+      <p><strong>Email:</strong> ${usuario.email}</p>
+      <p><strong>Endereço:</strong> ${usuario.endereco}</p>
+    `;
+  }
+}
+
+// Logout
+function logout() {
+  localStorage.removeItem("logado");
+  window.location.href = "login.html";
+}
