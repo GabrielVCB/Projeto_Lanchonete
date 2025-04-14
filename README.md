@@ -30,12 +30,33 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
    - Permite a seleção de forma de pagamento e inserção de informações de entrega.
 
 3. **Pedidos**:
-   - Visualização de pedidos em andamento.
-   - Histórico de pedidos realizados.
-   - Opção para limpar histórico de pedidos.
+   - Visualiza pedidos em andamento.
+   - Exibe o histórico de pedidos realizados.
+   - Possibilita limpar o histórico de pedidos.
 
 4. **Persistência de dados**:
-   - Os dados do carrinho e pedidos são armazenados no navegador do cliente usando `localStorage`.
+   - Armazena os dados do carrinho e pedidos no navegador do cliente usando `localStorage`.
+
+## 📝 Requisitos
+
+### Funcionais
+
+1. O cliente visualiza todos os produtos disponíveis na página inicial, com imagem e preço.
+2. É possível adicionar produtos ao carrinho.
+3. O cliente altera a quantidade ou remove itens no carrinho.
+4. O sistema calcula automaticamente o valor total do pedido no carrinho.
+5. O cliente informa a forma de pagamento e o endereço de entrega antes de finalizar o pedido.
+6. O cliente consulta os pedidos atuais e o histórico de pedidos anteriores.
+7. Os dados do carrinho e dos pedidos são armazenados localmente no navegador.
+
+### Não Funcionais
+
+1. O site é responsivo e acessível em dispositivos móveis, tablets e desktops.
+2. Carrega rapidamente, com um tempo de resposta inferior a 2 segundos para as principais ações.
+3. O design segue as diretrizes do protótipo criado no Figma.
+4. Utiliza `localStorage` para armazenar dados de forma persistente.
+5. O site é hospedado em um ambiente confiável e acessível, como a plataforma Vercel.
+6. Apresenta notificações de erro e/ou confirmação para ações relevantes.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -61,7 +82,6 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 **Página Desenvolvida:**
 ![Página Inicial](https://github.com/user-attachments/assets/d405e919-61ee-4995-b045-2af7d1da709c)
 
-
 ---
 
 ### Carrinho de Compras
@@ -69,7 +89,9 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 ![Protótipo Carrinho de Compras](https://github.com/user-attachments/assets/10d8fd20-6623-4162-a52e-40aaae6ed07a)
 
 **Página Desenvolvida:**
-![Carrinho de Compras](https://github.com/user-attachments/assets/694d5a10-911c-4de4-8a67-5399c0b97b4f)---
+![Carrinho de Compras](https://github.com/user-attachments/assets/694d5a10-911c-4de4-8a67-5399c0b97b4f)
+
+---
 
 ### Pedidos
 **Protótipo do Figma:**
@@ -79,3 +101,4 @@ O público-alvo deste projeto são os clientes da **Lanchonete do Abner**, local
 ![Pedidos](https://github.com/user-attachments/assets/b9ca7cce-5ba1-4f37-8439-1fe9f6d7a649)
 
 ---
+
