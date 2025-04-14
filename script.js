@@ -83,7 +83,7 @@ function updateOrdersDisplay() {
         const itemElement = document.createElement('div');
         itemElement.className = 'order-item';
         itemElement.innerHTML = `
-          <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+          <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
         `;
         orderElement.appendChild(itemElement);
       });
@@ -103,7 +103,7 @@ function updateOrdersDisplay() {
         const itemElement = document.createElement('div');
         itemElement.className = 'order-item';
         itemElement.innerHTML = `
-          <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+          <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
         `;
         orderElement.appendChild(itemElement);
       });
@@ -113,6 +113,7 @@ function updateOrdersDisplay() {
     });
   }
 }
+
 
 function clearHistory() {
   orderHistory = [];
@@ -153,21 +154,30 @@ function finalizeOrder() {
     return;
   }
 
-  if (currentOrder.length > 0) {
-    orderHistory.unshift(currentOrder); 
+  // Agrupar os itens do carrinho antes de salvar
+  const groupedItems = agruparItens(cart);
+
+  if (groupedItems.length > 0) {
+    // Adiciona o pedido ao histórico
+    orderHistory.unshift(groupedItems);
+
+    // Limitar o número de pedidos no histórico, por exemplo, manter os 2 mais recentes
     if (orderHistory.length > 2) {
-      orderHistory.pop(); 
+      orderHistory.pop();
     }
   }
-  currentOrder = cart.slice();
 
-  saveOrders();
-  cart = [];
-  saveCart();
-  updateCartDisplay();
+  // Atualizar o pedido atual
+  currentOrder = groupedItems;
+
+  saveOrders();  // Salva os pedidos e o histórico
+  cart = [];     // Limpa o carrinho
+  saveCart();    // Salva o carrinho vazio no localStorage
+  updateCartDisplay(); // Atualiza a exibição do carrinho
   showNotification("Pedido finalizado!");
   window.location.href = 'pedidos.html';
 }
+
 
 function updateCartDisplay() {
     const cartContainer = document.querySelector('.cart-container');
@@ -211,4 +221,23 @@ function updateCartDisplay() {
     updateCartDisplay();
     updateOrdersDisplay();
   });
+
+  function agruparItens(carrinho) {
+    const itensAgrupados = {};
+  
+    carrinho.forEach(item => {
+      if (itensAgrupados[item.name]) {
+        itensAgrupados[item.name].quantity += item.quantity;
+      } else {
+        itensAgrupados[item.name] = {
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity
+        };
+      }
+    });
+  
+    return Object.values(itensAgrupados);
+  }
+  
   
