@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadCart();
-    loadOrders();
-    updateCartDisplay();
-  });
+  loadCart();
+  loadOrders();
+  updateCartDisplay();
+  preencherDadosUsuario(); // <- nova função
+});
   
   function updateCartDisplay() {
     const cartContainer = document.querySelector('.cart-container');
@@ -70,5 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
     showNotification("Pedido finalizado!");
     window.location.href = 'pedidos.html';
+  }
+  
+  function preencherDadosUsuario() {
+    const usuarioJSON = localStorage.getItem("usuario");
+    if (usuarioJSON) {
+      const usuario = JSON.parse(usuarioJSON);
+  
+      const inputEndereco = document.getElementById("address");
+      const inputTelefone = document.getElementById("phone");
+  
+      if (inputEndereco && usuario.endereco) {
+        inputEndereco.value = usuario.endereco;
+      }
+  
+      if (inputTelefone && usuario.telefone) {
+        inputTelefone.value = usuario.telefone;
+      }
+    }
   }
   
