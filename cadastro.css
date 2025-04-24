@@ -6,6 +6,14 @@ body {
   color: #333;
 }
 
+header {
+  background-color: #b71c1c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
 .container {
   max-width: 400px;
   margin: 50px auto;
@@ -15,20 +23,15 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h2 {
   text-align: center;
-  color: #d35400;
+  color: #b71c1c;
   margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-}
-
-label {
-  margin-bottom: 6px;
-  font-weight: bold;
 }
 
 input[type="text"],
@@ -43,7 +46,7 @@ input[type="password"] {
 
 button {
   padding: 12px;
-  background-color: #d35400;
+  background-color: #b71c1c;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -53,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #b84300;
+  background-color: #a01717;
 }
 
 .link {
@@ -62,7 +65,7 @@ button:hover {
 }
 
 .link a {
-  color: #d35400;
+  color: #b71c1c;
   text-decoration: none;
   font-size: 14px;
 }
