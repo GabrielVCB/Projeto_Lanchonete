@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (orderHistory.length > 2) orderHistory.pop();
     }
   
-    currentOrder = groupedItems;
+    currentOrder.unshift(groupedItems);
     saveOrders();
     cart = [];
     saveCart();

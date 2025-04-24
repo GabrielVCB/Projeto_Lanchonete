@@ -9,23 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
   
     if (ordersContainer) {
       ordersContainer.innerHTML = '';
-      if (currentOrder.length > 0) {
+      currentOrder.forEach((pedido, index) => {
         const orderElement = document.createElement('div');
         orderElement.className = 'order';
-        currentOrder.forEach(item => {
+    
+        pedido.forEach(item => {
           orderElement.innerHTML += `
             <div class="order-item">
               <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
             </div>
           `;
         });
-        orderElement.innerHTML += `<span>Status: 🛵 A caminho</span>`;
-        orderElement.innerHTML += `<button class="delete-button" onclick="deleteCurrentOrder()">Cancelar Pedido</button>`;
+    
+        orderElement.innerHTML += `
+          <span>Status: 🛵 A caminho</span>
+          <button class="received-button" onclick="markAsReceived(${index})">Recebido</button>
+          <button class="delete-button" onclick="deleteCurrentOrder(${index})">Cancelar</button>
+        `;
+    
         ordersContainer.appendChild(orderElement);
         ordersContainer.appendChild(document.createElement('hr'));
-      }
+      });
     }
-  
+    
     if (historyContainer) {
       historyContainer.innerHTML = '';
       orderHistory.forEach(order => {
@@ -52,10 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
     showNotification("Histórico excluído!");
   }
   
-  function deleteCurrentOrder() {
-    currentOrder = [];
+  function deleteCurrentOrder(index) {
+    currentOrder.splice(index, 1);
     saveOrders();
     updateOrdersDisplay();
     showNotification("Pedido cancelado!");
+  }  
+
+  function markAsReceived(index) {
+    const pedidoRecebido = currentOrder.splice(index, 1)[0];
+    orderHistory.unshift(pedidoRecebido);
+    saveOrders();
+    updateOrdersDisplay();
+    showNotification("Pedido marcado como recebido!");
   }
+  
   
