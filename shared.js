@@ -17,10 +17,10 @@ function saveOrders() {
 }
 
 function loadOrders() {
-  const storedCurrentOrder = localStorage.getItem('currentOrder');
-  const storedOrderHistory = localStorage.getItem('orderHistory');
-  if (storedCurrentOrder) currentOrder = JSON.parse(storedCurrentOrder);
-  if (storedOrderHistory) orderHistory = JSON.parse(storedOrderHistory);
+  const savedCurrentOrder = localStorage.getItem('currentOrder');
+  const savedOrderHistory = localStorage.getItem('orderHistory');
+  currentOrder = savedCurrentOrder ? JSON.parse(savedCurrentOrder) : [];
+  orderHistory = savedOrderHistory ? JSON.parse(savedOrderHistory) : [];
 }
 
 function showNotification(message) {
