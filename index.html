@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lanchonete do Abner</title>
     <link rel="stylesheet" href="index.css" />
-    <script>
-      if (!localStorage.getItem("logado")) {
-        window.location.href = "login.html";
-      }
-    </script>
   </head>
   <body>
     <header class="header">LANCHONETE DO ABNER</header>
@@ -49,7 +44,16 @@
     <footer class="footer">
       <p>&copy; 2023 Lanchonete do Abner. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Scripts da aplicação -->
     <script src="shared.js"></script>
     <script src="index.js"></script>
+
+    <!-- Redirecionamento para login se não estiver logado -->
+    <script>
+      if (!localStorage.getItem("logado")) {
+        window.location.href = "login.html";
+      }
+    </script>
   </body>
 </html>
