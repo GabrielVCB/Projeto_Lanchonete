@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     perfilDiv.innerHTML = `
       <p><strong>Nome:</strong> ${usuario.nome}</p>
       <p><strong>Email:</strong> ${usuario.email}</p>
+      <p><strong>Telefone:</strong> ${usuario.telefone}</p>
       <p><strong>Endereço:</strong> ${usuario.endereco}</p>
     `;
   }
