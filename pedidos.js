@@ -72,5 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       saveOrders();
       updateOrdersDisplay();
       showNotification("Pedido marcado como recebido!");
+      console.log('currentOrder:', currentOrder);
+      console.log('orderHistory:', orderHistory);
     }
   }
