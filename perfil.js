@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
   const perfilDiv = document.getElementById("perfilInfo");
 
-  if (!logado) {
+  if (logado !== "true") {
     window.location.href = "login.html";
     return;
   }
