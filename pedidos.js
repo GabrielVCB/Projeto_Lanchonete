@@ -66,11 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }  
 
   function markAsReceived(index) {
-    const pedidoRecebido = currentOrder.splice(index, 1)[0];
-    orderHistory.unshift(pedidoRecebido);
-    saveOrders();
-    updateOrdersDisplay();
-    showNotification("Pedido marcado como recebido!");
+    const pedidoRecebido = currentOrder.splice(index, 1)[0]; 
+    if (pedidoRecebido && Array.isArray(pedidoRecebido)) {
+      orderHistory.unshift(pedidoRecebido); 
+      saveOrders();
+      updateOrdersDisplay();
+      showNotification("Pedido marcado como recebido!");
+    }
   }
-  
-  
