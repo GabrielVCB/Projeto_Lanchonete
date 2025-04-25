@@ -1,113 +1,148 @@
-# Lanchonete do Abner
+# 🍔 Lanchonete do Abner
 
-Bem-vindo ao repositório do site da Lanchonete do Abner! Este projeto foi desenvolvido para digitalizar o atendimento de uma lanchonete local, permitindo aos clientes realizar pedidos, gerenciar o carrinho de compras e acompanhar o histórico de pedidos de forma simples e eficiente.
+Bem-vindo ao repositório do site da **Lanchonete do Abner**!  
+Este projeto tem como objetivo digitalizar o atendimento de uma lanchonete local, oferecendo aos clientes uma plataforma moderna para realizar pedidos, acompanhar o histórico e gerenciar sua experiência de compra com praticidade.
 
-🌐 *Acesse o site online:* [Lanchonete do Abner](#)
+🌐 **Acesse o site online:** [Lanchonete do Abner](#)
+
+---
 
 ## 👥 Participantes
 
-- Henri Leonardo 
- •  Gabriel Veracruz
-- Guilherme Serreti
- •  Luiz Eduardo Oliveira 
+- Henri Leonardo  
+- Gabriel Vera Cruz  
+- Guilherme Serreti  
+- Luiz Eduardo Oliveira  
 - Igor Leal
+
+---
 
 ## 📌 Links Importantes
 
-- *Backlog no Trello:* [Acessar Trello](#)
-- *Protótipo no Figma:* [Acessar Figma](#)
-- *Apresentação (Screencast):* [Ver vídeo no YouTube](#)
+- 📋 **Backlog no Trello:** [Acessar Trello](https://trello.com/invite/b/6807e89191cba0906afc21f5/ATTI8e254b05ecb2bb91307443cad7dcc508D2C13218/projeto-aps)  
+- 🎨 **Protótipo no Figma:** [Acessar Figma](https://www.figma.com/design/fqoD4zycqm822DsThk4hmY/Lanchonete-Abner?node-id=0-1&p=f&t=QAm4ceR15xu9nmwI-0)  
+- 🎥 **Apresentação (Screencast):** [Ver vídeo no YouTube](https://youtu.be/41PE-8oKzPk)
+
+---
 
 ## 📖 Descrição
 
-O site foi projetado para oferecer uma experiência amigável e prática aos usuários, promovendo os produtos da lanchonete e facilitando o processo de compra. Entre as principais funcionalidades estão:
+O site foi desenvolvido com foco na experiência do usuário, permitindo a visualização de produtos, personalização de pedidos, controle de carrinho e consulta de pedidos anteriores. As funcionalidades incluem:
 
-- Visualização de produtos com imagens e preços.
-- Carrinho de compras interativo para adicionar, remover e ajustar itens.
-- Gestão de pedidos, com opções para acompanhar pedidos atuais e visualizar históricos.
-- Seleção de forma de pagamento e inserção de endereço de entrega.
-- Notificação de adição ao carrinho para melhorar a experiência do cliente.
+- Visualização de produtos com imagem e preço  
+- Carrinho de compras interativo  
+- Histórico de pedidos  
+- Seleção de forma de pagamento e endereço  
+- Interface responsiva  
+- Autenticação de usuário (login/cadastro)  
+- Edição de dados pessoais na área de perfil
+
+---
 
 ## 🎯 Público-alvo
 
-O público-alvo deste projeto são os clientes da Lanchonete do Abner, localizada na Rua das Flores, 123, Centro, Cidade. A solução é ideal para pequenos negócios que desejam melhorar sua presença digital e modernizar o atendimento ao cliente.
+Clientes da Lanchonete do Abner, situada na Rua das Flores, 123 – Centro.  
+Ideal para pequenos comércios que desejam oferecer um atendimento moderno e digital.
+
+---
 
 ## 🖥 Funcionalidades
 
-### Página inicial:
-- Exibe os produtos disponíveis para compra.
-- Cada produto possui botão para adicionar ao carrinho.
+### Página Inicial
+- Lista os produtos com botão para adicionar ao carrinho
 
-### Carrinho de compras:
-- Lista os itens adicionados ao carrinho com controle de quantidade.
-- Mostra o valor total do pedido.
-- Permite a seleção de forma de pagamento e inserção de informações de entrega.
+### Carrinho de Compras
+- Controle de quantidade, remoção de itens e totalizador
+- Escolha de forma de pagamento e endereço de entrega
 
-### Pedidos:
-- Visualiza pedidos em andamento.
-- Exibe o histórico de pedidos realizados.
-- Possibilita limpar o histórico de pedidos.
+### Pedidos
+- Histórico de pedidos e acompanhamento em tempo real
 
-### Persistência de dados:
-- Armazena os dados do carrinho e pedidos no navegador do cliente usando localStorage.
+### Página de Login
+- Acesso para clientes cadastrados com validação de dados
+
+### Página de Cadastro
+- Registro de novos clientes com dados básicos
+
+### Página de Perfil
+- Visualização e edição dos dados do usuário
+
+### Persistência de Dados
+- Armazenamento de carrinho e pedidos via `localStorage`
+
+---
 
 ## ✍ Histórias de Usuário
 
-1. Como cliente, quero visualizar os produtos com imagem e preço para escolher o que comprar.  
-2. Como cliente, quero adicionar produtos ao carrinho para organizá-los antes de finalizar o pedido.  
-3. Como cliente, quero ver o valor total do pedido no carrinho para saber quanto vou pagar.  
-4. Como cliente, quero remover itens do carrinho caso mude de ideia.  
-5. Como cliente, quero selecionar a forma de pagamento ao finalizar o pedido.  
-6. Como cliente, quero digitar o endereço de entrega para receber meu pedido corretamente.  
-7. Como cliente, quero acompanhar os pedidos em andamento para saber quando serão entregues.  
-8. Como cliente, quero ver o histórico dos meus pedidos anteriores.  
-9. Como cliente, quero ser notificado quando um item for adicionado ao carrinho.  
-10. Como cliente, quero que meus dados fiquem salvos no navegador para não precisar preencher tudo novamente.
+1. Como cliente, quero visualizar os produtos disponíveis.  
+2. Como cliente, quero adicionar/remover itens no carrinho.  
+3. Como cliente, quero ver o valor total da compra.  
+4. Como cliente, quero acompanhar o status dos meus pedidos.  
+5. Como cliente, quero salvar meu endereço e forma de pagamento.  
+6. Como cliente, quero me cadastrar para acessar recursos exclusivos.  
+7. Como cliente, quero fazer login para acessar meu histórico.  
+8. Como cliente, quero editar meus dados pessoais na área de perfil.  
+9. Como cliente, quero receber notificações ao adicionar produtos ao carrinho.  
+10. Como cliente, quero que os dados fiquem salvos para reutilização.
+
+---
 
 ## 📝 Requisitos
 
 ### Funcionais
-- O cliente visualiza todos os produtos disponíveis na página inicial, com imagem e preço.
-- É possível adicionar produtos ao carrinho.
-- O cliente altera a quantidade ou remove itens no carrinho.
-- O sistema calcula automaticamente o valor total do pedido no carrinho.
-- O cliente informa a forma de pagamento e o endereço de entrega antes de finalizar o pedido.
-- O cliente consulta os pedidos atuais e o histórico de pedidos anteriores.
-- Os dados do carrinho e dos pedidos são armazenados localmente no navegador.
+- Adição/remoção de produtos no carrinho  
+- Cadastro/login de usuários  
+- Edição de perfil  
+- Histórico e status dos pedidos  
+- Armazenamento local de dados (sem backend)
 
 ### Não Funcionais
-- O site é responsivo e acessível em dispositivos móveis, tablets e desktops.
-- Carrega rapidamente, com um tempo de resposta inferior a 2 segundos para as principais ações.
-- O design segue as diretrizes do protótipo criado no Figma.
-- Utiliza localStorage para armazenar dados de forma persistente.
-- O site é hospedado em um ambiente confiável e acessível, como a plataforma Vercel.
-- Apresenta notificações de erro e/ou confirmação para ações relevantes.
+- Site responsivo (mobile e desktop)  
+- Interface fluida com notificações  
+- Tempo de carregamento otimizado  
+- Design conforme protótipo Figma  
+- Hospedado em plataforma confiável (ex: Vercel)
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
 - HTML5  
 - CSS3  
 - JavaScript (ES6+)  
-- LocalStorage para persistência de dados no cliente.
+- LocalStorage (persistência de dados)
+
+---
 
 ## 🛠 Estrutura do Projeto
 
-- index.html: Página principal com listagem dos produtos.  
-- carrinho.html: Página do carrinho de compras.  
-- pedidos.html: Página para visualizar pedidos em andamento e histórico.  
-- styles.css, stylesC.css, stylesP.css: Arquivos de estilo para cada página.  
-- script.js: Código JavaScript que implementa a lógica de interação com o carrinho e pedidos.
+- `index.html`: Página inicial  
+- `carrinho.html`: Carrinho de compras  
+- `pedidos.html`: Histórico de pedidos  
+- `login.html`: Página de login  
+- `cadastro.html`: Página de cadastro  
+- `perfil.html`: Página de perfil  
+- `index.css`, `carrinho.css`, `pedidos.css`,`login.css`, `cadastro.css`,`perfil.css`: Estilos das páginas  
+- `index.js`, `carrinho.js`, `pedidos.js`,`login.js`, `cadastro.js`,`perfil.js`, `shared.js`: Lógica de interação 
 
-## 📸 Comparação de Protótipo (Figma) e Páginas Finais
+---
+
+## 📸 Páginas Desenvolvidas
 
 ### Página Inicial
-- Protótipo do Figma: [Protótipo Página Inicial](#)  
-- Página Desenvolvida: [Página Inicial](#)
+[Página Inicial](https://projeto-lanchonete-pd4x.vercel.app/index.html)
 
 ### Carrinho de Compras
-- Protótipo do Figma: [Protótipo Carrinho de Compras](#)  
-- Página Desenvolvida: [Carrinho de Compras](#)
+[Carrinho de Compras](https://projeto-lanchonete-pd4x.vercel.app/carrinho.html)
 
 ### Pedidos
-- Protótipo do Figma: [Protótipo Pedidos](#)  
-- Página Desenvolvida: [Pedidos](#)
+[Pedidos](https://projeto-lanchonete-pd4x.vercel.app/pedidos.html)
+
+### Login
+[Página de Login](https://projeto-lanchonete-pd4x.vercel.app/login.html)
+
+### Cadastro
+[Página de Cadastro](https://projeto-lanchonete-pd4x.vercel.app/cadastro.html)
+
+### Perfil
+[Página de Perfil](https://projeto-lanchonete-pd4x.vercel.app/login.html)
