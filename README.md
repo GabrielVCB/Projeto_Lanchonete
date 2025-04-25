@@ -36,7 +36,7 @@ O site foi desenvolvido com foco na experiência do usuário, permitindo a visua
 - Seleção de forma de pagamento e endereço  
 - Interface responsiva  
 - Autenticação de usuário (login/cadastro)  
-- Edição de dados pessoais na área de perfil
+- Visualização de dados pessoais na área de perfil
 
 ---
 
@@ -66,7 +66,7 @@ Ideal para pequenos comércios que desejam oferecer um atendimento moderno e dig
 - Registro de novos clientes com dados básicos
 
 ### Página de Perfil
-- Visualização e edição dos dados do usuário
+- Visualização dos dados do usuário
 
 ### Persistência de Dados
 - Armazenamento de carrinho e pedidos via `localStorage`
