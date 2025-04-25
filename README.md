@@ -3,7 +3,7 @@
 Bem-vindo ao repositório do site da **Lanchonete do Abner**!  
 Este projeto tem como objetivo digitalizar o atendimento de uma lanchonete local, oferecendo aos clientes uma plataforma moderna para realizar pedidos, acompanhar o histórico e gerenciar sua experiência de compra com praticidade.
 
-🌐 **Acesse o site online:** [Lanchonete do Abner](#)
+🌐 **Acesse o site online:** [Lanchonete do Abner](https://projeto-lanchonete-pd4x.vercel.app/)
 
 ---
 
