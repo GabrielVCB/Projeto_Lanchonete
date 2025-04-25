@@ -10,6 +10,7 @@ Este projeto tem como objetivo digitalizar o atendimento de uma lanchonete local
 ## 👥 Participantes
 
 - Henri Leonardo  
+- Gabriel Pereira
 - Gabriel Vera Cruz  
 - Guilherme Serreti  
 - Luiz Eduardo Oliveira  
@@ -124,6 +125,7 @@ Ideal para pequenos comércios que desejam oferecer um atendimento moderno e dig
 - `perfil.html`: Página de perfil  
 - `index.css`, `carrinho.css`, `pedidos.css`,`login.css`, `cadastro.css`,`perfil.css`: Estilos das páginas  
 - `index.js`, `carrinho.js`, `pedidos.js`,`login.js`, `cadastro.js`,`perfil.js`, `shared.js`: Lógica de interação 
+- `logo.png`: Imagem da logo
 
 ---
 
